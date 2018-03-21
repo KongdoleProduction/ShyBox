@@ -1,3 +1,5 @@
+[![](https://github.com/KongdoleProduction/ShyBox/blob/master/thumbnail.png)](https://www.youtube.com/watch?v=MWuG9GowW5o)
+
 ## 배선도(wiring schematics)
 
 Arduino | Servo 1(Left ear)
