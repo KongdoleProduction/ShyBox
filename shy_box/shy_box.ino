@@ -1,9 +1,7 @@
 #include <Servo.h>
 
-int sonar_vcc_pin = A0;
 int sonar_trig_pin = A1;
 int sonar_echo_pin = A2;
-int sonar_gnd_pin = A3;
 
 Servo servo_ear_left;
 Servo servo_ear_right;
@@ -20,19 +18,12 @@ int servo_eyes_up = 1700;
 int servo_eyes_normal = 1500;
 
 void setup() {
-  // put your setup code here, to run once:
   servo_ear_left.attach(3);
   servo_ear_right.attach(4);
   servo_eyes.attach(2);
 
-  pinMode(sonar_vcc_pin, OUTPUT);
   pinMode(sonar_trig_pin, OUTPUT);
   pinMode(sonar_echo_pin, INPUT);
-  pinMode(sonar_gnd_pin, OUTPUT);
-  digitalWrite(sonar_vcc_pin, HIGH);
-  digitalWrite(sonar_gnd_pin, LOW);
-
-  //Serial.begin(115200);
 }
 
 #define STATE_OPEN 0
@@ -53,7 +44,6 @@ void loop() {
   else if (state == STATE_OPEN) {
 
     int distance = getDistance();
-    //Serial.println(distance);
     
     if (distance >= 30) {
       servo_eyes.writeMicroseconds(servo_eyes_normal);
