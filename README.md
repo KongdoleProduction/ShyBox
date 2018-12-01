@@ -2,7 +2,7 @@
 
 ## 배선도(wiring schematics)
 
-[](https://github.com/KongdoleProduction/ShyBox/blob/master/schematics.png)
+![](https://github.com/KongdoleProduction/ShyBox/blob/master/schematics.png)
 
 Arduino | Servo 1(Left ear)
 --- | ---
